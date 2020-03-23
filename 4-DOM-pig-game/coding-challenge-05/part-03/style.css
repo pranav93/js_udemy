@@ -178,20 +178,28 @@ i {
 }
 
 .btn-roll {
-    top: 403px;
+    top: 500px;;
 }
 
 .btn-hold {
-    top: 467px;
+    top: 600px;
 }
 
 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    margin: 10px;
+}
+
+.dice1 {
+    top: 200px;
+}
+
+.dice2 {
+    top: 340px;
 }
 
 .winner {
