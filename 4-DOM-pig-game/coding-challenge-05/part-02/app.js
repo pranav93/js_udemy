@@ -112,9 +112,3 @@ document.getElementById('input-form').addEventListener('submit', function (event
     document.querySelector('.win-score-box').textContent = "Collect " + winScore + " Points to Win!";
     event.preventDefault();
 })
-
-// document.querySelector('#current-' + activePlayer).textContent = dice;
-// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-
-// var x = document.querySelector('#score-0').textContent;
-// console.log(x);
