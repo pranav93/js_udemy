@@ -58,9 +58,6 @@ elements.searchResPages.addEventListener('click', e => {
     }
 });
 
-// RECIPE CONTROLLER
-// 47746
-
 const controlRecipe = async () => {
     // Get ID from url
     const id = window.location.hash.replace('#', '');
@@ -76,9 +73,10 @@ const controlRecipe = async () => {
             // Get recipe data
             await state.recipe.getRecipe();
 
-            // Calculate servings and time
+            // Calculate servings, time and parse ingredients
             state.recipe.calcTime();
             state.recipe.calcServings();
+            state.recipe.parseIngredients();
 
             // Render recipe
             console.log(state.recipe);
@@ -87,12 +85,5 @@ const controlRecipe = async () => {
         }
     }
 };
-
-// const r = new Recipe(47746);
-// r.getRecipe();
-// console.log(r);
-
-// window.addEventListener('hashchange', controlRecipe);
-// window.addEventListener('load', controlRecipe);
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
