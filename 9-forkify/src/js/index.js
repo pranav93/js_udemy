@@ -11,6 +11,7 @@ import {
     renderLoader,
     clearLoader
 } from "./views/base";
+import '../css/style.css';
 
 /*Global state of the app
  * - Search object
