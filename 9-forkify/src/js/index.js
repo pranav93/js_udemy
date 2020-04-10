@@ -67,7 +67,6 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async () => {
     // Get ID from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
 
     if (id) {
         // Prepare UI for changes
@@ -99,9 +98,8 @@ const controlRecipe = async () => {
                 isLiked = state.likes.isLiked(id);
             }
             recipeView.renderRecipe(state.recipe, isLiked);
-            // console.log(state.recipe);
         } catch (error) {
-            console.log(error);
+            alert(error);
         }
     }
 };
@@ -163,7 +161,6 @@ const controlLike = () => {
 
         // Add like to the UI list
         likesView.renderLike(like);
-        // console.log(state.likes);
 
         // User HAS yet liked current recipe
     } else {
@@ -175,7 +172,6 @@ const controlLike = () => {
 
         // Remove like from the UI list
         likesView.deleteLike(currentID);
-        // console.log(state.likes);
     }
 
     const numOflikes = state.likes.getNumLikes();
@@ -210,5 +206,4 @@ elements.recipe.addEventListener('click', e => {
         // Like Controller
         controlLike();
     }
-    console.log(state.recipe);
 });
